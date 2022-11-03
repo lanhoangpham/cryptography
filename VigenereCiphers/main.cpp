@@ -17,9 +17,6 @@ Mô tả hệ mã:
 Các ký tự áp dụng: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 */
 
-
-
-
 int main() {
 
 	char key[] = "cipher";
@@ -27,19 +24,17 @@ int main() {
 	//bản tin muốn mã hóa
 	char message[] = /*"XinChaoHuong";//*/ "Cryptography";
 
-
-	//int *convertCharToInt_message = arrayAsciiOfString(message, sizeof(message));
-
-	//int *convertCharToInt_key = arrayAsciiOfString(key, sizeof(key));
 	
 	char* c = cryptographyVigenreCiphers(message, key, sizeof(message), sizeof(key) - 1);
 	
+	//mã hóa xâu bằng mã Vigenere
 	cout << "Chuoi sau ma hoa: ";
 	for (int i = 0; i < sizeof(message) - 1 ; i++) {
 		cout << c[i];
 	}
 	cout << endl;
-
+	
+	//giải mã hóa xâu bằng mã Vigenere
 	cout << "Chuoi sau giai ma: ";
 	char *d = decryptographyVigenreCiphers(c, key, sizeof(message), sizeof(key) - 1);
 	for (int i = 0; i < sizeof(message) -1 ; i++) {
