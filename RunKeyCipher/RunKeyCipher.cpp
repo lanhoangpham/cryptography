@@ -153,7 +153,7 @@ char *decryptographyVigenreCiphers(char *message, char *key, int length){
 	//số lượng ký tự chuẩn bị được mã hóa
 	int temp1 = sizeOfMessage - length > sizeOfKey ?  sizeOfKey  : sizeOfMessage - length;
 	//mã hóa theo mã Vigenere
-	for (int i = length; i < length + temp1 ; i++) 
+	for (int i = length; i < length + temp1 ; i++) {
         //chỉ số của ký tự làm khóa 
         int key_index = i%sizeOfKey;
         //mã hóa ký tự
